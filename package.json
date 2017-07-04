@@ -1,8 +1,8 @@
 {
-  "name": "angularjs-boilerplate",
-  "version": "1.3.0",
+  "name": "task manager",
+  "version": "1.0.0",
   "license": "MIT",
-  "description": "Simple AngularJS Boilerplate to kick start your new project with SASS support and Gulp watch/build tasks",
+  "description": "Todo App writen in angularjs",
   "main": "app/app.js",
   "devDependencies": {
     "browser-sync": "^1.9.1",
