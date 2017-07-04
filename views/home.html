@@ -1,0 +1,65 @@
+<style>
+    .done-true{
+        font-size: 24px;
+        color: green;
+        font-style: italic;
+        text-decoration: line-through;
+    }
+    .done-false{
+        font-size: 24px;
+        color: red;
+        font-weight: bold;
+    }
+    span[contentEditable="true"]{
+        background: white;
+        width: 20px;
+        height: 31px;
+        padding: 10px;
+    }
+    .delete{
+      margin: 10px; 
+      border: 2px solid #000;
+      border-radius: 4px;
+      padding: 4px;
+      background:red;
+      color: white;
+    }
+    a:hover{
+      text-decoration: none;
+      color: white;
+    }
+    .hide-true {
+      display : none;
+    }
+</style>
+<h2 class="text-center">Task Manager App</h2>
+
+<!-- slider directive -->
+<div>
+    <img src="http://blog.kurtosys.com/wp-content/uploads/2015/01/advisor-to-do-list.jpg" style="display: block;" alt="todo" height="400" width="1250">        
+</div>
+
+<div class="container cf">
+    <div ng-controller="todo">
+        <h1 style="text-align: center;">Add Task</h1>
+        <input ng-keyup="searchEnter()" ng-model="task" type="text">
+        <h1 style="text-align: center;">Task List</h1>
+        <ul style="text-align: center; margin:10px; ">
+            <li ng-repeat="(index,alltask) in tasks track by $index">
+            <div ng-model="alltask.hide" class="hide-{{alltask.hide}}">       
+            <input  type="checkbox" ng-click="checkedok()" ng-model="alltask.status">
+            <span contentEditable="false" ng-keydown="enterAgain(alltask.todotask)" ng-dblclick="contentEdit(alltask.todotask)" class="done-{{alltask.status}}">
+            {{alltask.todotask}}
+            </span>
+            <a class="delete" ng-click="deleteTask(alltask.id,alltask)">X</a>
+            </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="text-center">
+    <small>Task Manager App By <a target="_blank" href="http://manishbatra.com">manishbatra.com</a></small>
+</div>
+
