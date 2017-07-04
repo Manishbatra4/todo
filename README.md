@@ -1,6 +1,6 @@
 Demo - http://www.manishbatra.com/todo
 
-Task Manager App writen in angularjs using js boiler plate 
+Task Manager App writen in angularjs using js boilerplate (https://github.com/jbutko/AngularJS-Boilerplate) 
 
 Step - 1
 
