@@ -25,6 +25,10 @@
 		<link rel="stylesheet" type="text/css" href="styles/style.css" />
 		<!-- endbuild -->
 
+		<!-- emoji -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  		<link href="lib/css/emoji.css" rel="stylesheet">
+
 	</head>
 
 	<body class="main-wrapper">
@@ -40,7 +44,11 @@
 		<div data-ng-view="" class="container"></div>
 
 	</body>
-
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="lib/js/config.js"></script>
+    <script src="lib/js/util.js"></script>
+    <script src="lib/js/jquery.emojiarea.js"></script>
+    <script src="lib/js/emoji-picker.js"></script>
 	<!-- Vendors -->
 	<!-- build:nonangularlibs js/nonangularlibs.js -->
 	<script type="text/javascript" src="js/nonangular/jquery-1.11.2.min.js"></script>
@@ -79,6 +87,7 @@
 
 	<!-- Custom Controller -->
 	<script type="text/javascript" src="js/controller/todoController.js"></script>
+
 	<!-- End Custom Controller -->
 
 	<!-- templates from $templateCache -->
@@ -86,6 +95,17 @@
 	<!-- endbuild -->
 	
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+      $(function() {
+        // Initializes and creates emoji set from sprite sheet
+        window.emojiPicker = new EmojiPicker({
+          emojiable_selector: '[data-emojiable=true]',
+          assetsPath: 'lib/img/',
+          popupButtonClasses: 'fa fa-smile-o'
+        });
+        window.emojiPicker.discover();
+      });
+    </script>
 	<script>
 	    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 	    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

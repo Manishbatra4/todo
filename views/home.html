@@ -42,7 +42,9 @@
 <div class="container cf">
     <div ng-controller="todo">
         <h1 style="text-align: center;">Add Task</h1>
-        <input ng-keyup="searchEnter()" ng-model="task" type="text">
+        <p class="lead emoji-picker-container">aSSA
+        <input type="text" ng-keyup="searchEnter()" data-emojiable="true" ng-model="task">
+        </p>
         <h1 style="text-align: center;">Task List</h1>
         <ul style="text-align: center; margin:10px; ">
             <li ng-repeat="(index,alltask) in tasks track by $index">
