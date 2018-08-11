@@ -61,7 +61,8 @@
   },
   "homepage": "https://github.com/jbutko/AngularJS-Boilerplate",
   "dependencies": {
-    "gulp-imagemin": "^3.3.0",
-    "gulp-sass": "^3.1.0"
+    "angular": "^1.7.1",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-sass": "^3.2.1"
   }
 }
